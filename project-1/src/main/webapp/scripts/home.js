@@ -86,10 +86,10 @@ function showPendingTable(){
 		{
 			let row = table.insertRow(i + 1);
 			row.insertCell(0).innerHTML = pendingRequest[i].id;
-			row.insertCell(1).innerHTML = employees[i].amount;
-			row.insertCell(2).innerHTML = employees[i].date_submitted;
-			row.insertCell(3).innerHTML = employees[i].description;
-			row.insertCell(4).innerHTML = employees[i].type_id;
+			row.insertCell(1).innerHTML = pendingRequest[i].amount;
+			row.insertCell(2).innerHTML = pendingRequest[i].time_submitted;
+			row.insertCell(3).innerHTML = pendingRequest[i].description;
+			row.insertCell(4).innerHTML = pendingRequest[i].type_id;
 		}
 	} else {
 			let childDiv = document.getElementById(`warningPendingText`);
@@ -122,8 +122,8 @@ function showResolvedTable(){
 			let row = table.insertRow(i + 1);
 			row.insertCell(0).innerHTML = resolvedRequest[i].id;
 			row.insertCell(1).innerHTML = resolvedRequest[i].amount;
-			row.insertCell(2).innerHTML = resolvedRequest[i].date_submitted;
-			row.insertCell(3).innerHTML = resolvedRequest[i].date_resolved
+			row.insertCell(2).innerHTML = resolvedRequest[i].time_submitted;
+			row.insertCell(3).innerHTML = resolvedRequest[i].time_resolved
 			row.insertCell(4).innerHTML = resolvedRequest[i].description;
 			row.insertCell(5).innerHTML = resolvedRequest[i].type_id;
 			row.insertCell(6).innerHTML = resolvedRequest[i].status_id;

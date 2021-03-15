@@ -36,6 +36,53 @@
 		</div>
 	</form>
 
+		<form name="PendingRequest" onsubmit="getPendingRequest(event.preventDefault())" style="float:left; width:50%; height:300px">
+		<div>
+			<button type="submit" class="btn btn-primary">Pending Requests</button>
+			<table id="PendingTable">
+				<thead>
+					<tr>
+						<th>id </th>
+						<th>amount </th>
+						<th>submit </th>
+						<th>description </th>
+						<th>author </th>
+						<th>type </th>
+					</tr>
+				</thead>
+				<tbody>
+	
+				</tbody>
+			</table>
+			<div id="warningPendingText"></div>
+		</div>
+	</form>
+
+		<form name="ResolvedRequest" onsubmit="getResolvedRequest(event.preventDefault())">
+		<div>
+			<button type="submit" class="btn btn-primary">Resolved Requests</button>
+			<table id="ResolvedTable">
+				<thead>
+					<tr>
+						<th>id </th>
+						<th>amount </th>
+						<th>submit </th>
+						<th>resolved </th>
+						<th>description </th>
+						<th>author </th>
+						<th>resolver </th>
+						<th>type </th>
+						<th>status </th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<div id="warningResolvedText"></div>
+		</div>
+		</form>
+
+
+
 	<script src="scripts/managerhome.js">	
 	</script>
 

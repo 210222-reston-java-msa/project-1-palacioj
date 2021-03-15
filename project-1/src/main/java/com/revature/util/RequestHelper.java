@@ -95,6 +95,13 @@ public class RequestHelper {
 		pw.println(json);
 	}
 
+	public static void processUsers(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		List<User> allEmps = UserService.findAll();
+		String json = om.writeValueAsString(allEmps);
+		PrintWriter pw = res.getWriter();
+		pw.println(json);		
+	}
+	
 	public static void processReimbursementRequest(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		BufferedReader reader = req.getReader();
 		StringBuilder s = new StringBuilder();
